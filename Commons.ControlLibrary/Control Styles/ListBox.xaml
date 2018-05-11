@@ -1,0 +1,144 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="ListBoxItem">
+        <Setter Property="FontFamily" Value="{StaticResource FontTheme}" />
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="Foreground" Value="{StaticResource ContentLabelForegroundColor}"/>
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Grid>
+                        <Border x:Name="Border" Background="Transparent"/>
+                        <ContentPresenter></ContentPresenter>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="ListBoxItem.IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ListboxMouseOverColor}" />
+                            <Setter TargetName="Border" Property="BorderThickness" Value="2" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ListboxMouseOverColor}" />
+                        </Trigger>
+                        <Trigger Property="ListBoxItem.IsSelected" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ListboxSelectionColor}" />
+                            <Setter TargetName="Border" Property="BorderThickness" Value="2" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ListboxSelectionColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="listItemSelectorStyle" TargetType="ListBoxItem">
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True" >
+                <Setter Property="Height" Value="100" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="{StaticResource FontTheme}" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="BorderBrush" Value="{StaticResource ListSelectorSelectedBorderColor}" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Foreground" Value="{StaticResource ListSelectorSelectedForegroundColor}" />
+                <Setter Property="Margin" Value="2" />
+            </Trigger>
+            <Trigger Property="IsSelected" Value="False" >
+                <Setter Property="Height" Value="100" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="{StaticResource FontTheme}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Background" Value="{StaticResource ListSelectorItemBackground}"/>
+                <Setter Property="Foreground" Value="{StaticResource PrimaryFontColor}" />
+                <Setter Property="BorderBrush" Value="{StaticResource PrimaryFontColor}" />
+                <Setter Property="Margin" Value="2" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                    <Condition Property="IsSelected" Value="False" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.EnterActions>
+                    <StopStoryboard BeginStoryboardName="bgMouseLeave"/>
+                    <BeginStoryboard x:Name="bgMouseEnter">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From=".7" To="1" Duration="0:0:0:.2"/>
+                            <ThicknessAnimation Storyboard.TargetProperty="BorderThickness" From="0,0,0,0" To="5,0,5,0" Duration="0:0:0:.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="False"/>
+                    <Condition Property="IsSelected" Value="False" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.EnterActions>
+                    <StopStoryboard BeginStoryboardName="bgMouseEnter"/>
+                    <BeginStoryboard x:Name="bgMouseLeave">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To=".7" Duration="0:0:0:.2"/>
+                            <ThicknessAnimation Storyboard.TargetProperty="BorderThickness" From="5,0,5,0" To="0,0,0,0" Duration="0:0:0:.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="horizontalListItemSelectorStyle" TargetType="ListBoxItem">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Padding" Value="10,5,10,0"/>
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="{StaticResource FontTheme}" />
+        <Setter Property="Background" Value="{StaticResource ListSelectorItemBackground}"/>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="BorderBrush" Value="{StaticResource ListSelectorSelectedBorderColor}" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Foreground" Value="{StaticResource ListSelectorSelectedForegroundColor}" />
+                <Setter Property="Margin" Value="2" />
+            </Trigger>
+            <Trigger Property="IsSelected" Value="False">              
+                <Setter Property="Foreground" Value="{StaticResource PrimaryFontColor}" />
+                <Setter Property="BorderBrush" Value="{StaticResource PrimaryFontColor}" />
+                <Setter Property="Margin" Value="2" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                    <Condition Property="IsSelected" Value="False" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.EnterActions>
+                    <StopStoryboard BeginStoryboardName="bgMouseLeave"/>
+                    <BeginStoryboard x:Name="bgMouseEnter">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From=".7" To="1" Duration="0:0:0:.2"/>
+                            <ThicknessAnimation Storyboard.TargetProperty="BorderThickness" From="0,0,0,0" To="0,0,0,2" Duration="0:0:0:.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="False"/>
+                    <Condition Property="IsSelected" Value="False" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.EnterActions>
+                    <StopStoryboard BeginStoryboardName="bgMouseEnter"/>
+                    <BeginStoryboard x:Name="bgMouseLeave">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To=".7" Duration="0:0:0:.2"/>
+                            <ThicknessAnimation Storyboard.TargetProperty="BorderThickness" From="0,0,0,2" To="0,0,0,0" Duration="0:0:0:.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+
+</ResourceDictionary>

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Commons.ControlLibrary.PaginatedDataGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Commons.ControlLibrary"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600"
+             x:Name="PaginatedDataGridUC">
+    <UserControl.Resources>
+        <Style x:Key="textBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Height" Value="18"/>
+            <Setter Property="Margin" Value="0,2,0,0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <DataGrid Margin="0,0,0,30" ItemsSource="{Binding ItemsSource, ElementName=PaginatedDataGridUC}"/>
+        <Grid x:Name="pageControlGrid" HorizontalAlignment="Stretch" Margin="0,0,0,3" Background="{StaticResource DataGridHeaderBackgroundColor}" Height="27" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                <TextBlock Text="Displaying " Style="{StaticResource textBlockStyle}" HorizontalAlignment="Left" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <TextBlock Text="{Binding DisplayCurrentMin, ElementName=PaginatedDataGridUC}" Style="{StaticResource textBlockStyle}" HorizontalAlignment="Left" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <TextBlock Text=" - " Style="{StaticResource textBlockStyle}" HorizontalAlignment="Left" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <TextBlock Text="{Binding DisplayCurrentMax, ElementName=PaginatedDataGridUC}" Style="{StaticResource textBlockStyle}" HorizontalAlignment="Left" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <TextBlock Text=" of " Style="{StaticResource textBlockStyle}" HorizontalAlignment="Left" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <TextBlock Text="{Binding DisplayTotal, ElementName=PaginatedDataGridUC}" Style="{StaticResource textBlockStyle}" HorizontalAlignment="Left" Foreground="{DynamicResource DataGridHeaderForegroundColor}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <local:FirstButton x:Name="firstNavBtn" Command="{Binding FirstPageCommand, ElementName=PaginatedDataGridUC}" FontSize="19" Width="25" Height="25" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <local:PreviousButton x:Name="previousNavBtn" Command="{Binding PreviousPageCommand, ElementName=PaginatedDataGridUC}" FontSize="19" Width="25" Height="25" Margin="0,0,7,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TextBlock Text="Page" Style="{StaticResource textBlockStyle}" Margin="0,2,2,0" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <TextBlock Text="{Binding PageCurrent, ElementName=PaginatedDataGridUC}" Style="{StaticResource textBlockStyle}" Margin="0,2,2,0" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <TextBlock Text="of" Style="{StaticResource textBlockStyle}" Margin="0,2,2,0" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <TextBlock Text="{Binding PageTotal, ElementName=PaginatedDataGridUC}" Style="{StaticResource textBlockStyle}" Margin="0,2,5,0" Foreground="{DynamicResource DataGridHeaderForegroundColor}"/>
+                <local:NextButton x:Name="forwardNavBtn" Command="{Binding NextPageCommand, ElementName=PaginatedDataGridUC}" FontSize="19" Width="25" Height="25" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <local:LastButton x:Name="lastNavBtn" Command="{Binding LastPageCommand, ElementName=PaginatedDataGridUC}" FontSize="19" Width="25" Height="25" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            </StackPanel>
+        </Grid>
+        <local:LoadingGrid EnableLoad="{Binding IsBusy, ElementName=PaginatedDataGridUC}"/>
+    </Grid>
+</UserControl>

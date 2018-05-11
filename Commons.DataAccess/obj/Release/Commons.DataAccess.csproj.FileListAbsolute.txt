@@ -1,0 +1,14 @@
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Commons.DataAccess.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Commons.DataAccess.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Commons.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Oracle.ManagedDataAccess.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Renci.SshNet.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Prism.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Commons.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Renci.SshNet.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\bin\Release\Prism.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\obj\Release\Commons.DataAccess.csprojAssemblyReference.cache
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\obj\Release\Commons.DataAccess.csproj.CoreCompileInputs.cache
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\obj\Release\Commons.DataAccess.csproj.CopyComplete
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\obj\Release\Commons.DataAccess.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.DataAccess\obj\Release\Commons.DataAccess.pdb

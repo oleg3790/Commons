@@ -1,0 +1,86 @@
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Commons.ControlLibrary.dll.config
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Commons.ControlLibrary.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Commons.ControlLibrary.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\CommonServiceLocator.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Log.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Common.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Dpi.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Gdi32.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Messages.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.User32.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\FontAwesome.WPF.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Newtonsoft.Json.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Prism.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Prism.Wpf.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\System.Reactive.Core.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\System.Reactive.Interfaces.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\System.Reactive.Linq.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\System.Windows.Interactivity.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Log.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Log.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Common.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Common.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Dpi.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Dpi.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Gdi32.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Gdi32.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Messages.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.Messages.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.User32.pdb
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Dapplo.Windows.User32.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\FontAwesome.WPF.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Newtonsoft.Json.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Prism.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\Prism.Wpf.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\System.Reactive.Core.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\System.Reactive.Interfaces.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\bin\Release\System.Reactive.Linq.xml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\Storyboards.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\ToolTip.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\ListBox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\Expander.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\ToggleButton.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\ComboBox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\RichTextBox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Theme Library\DarkBlueTheme.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\ScrollViewer.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\Button.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\Checkbox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\DataGrid.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\GroupBox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\Hyperlink.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\Label.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\LabelTextbox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\RadioButton.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\TabControl.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\TextBlock.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\ErrorControl.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\StatusBanner.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\DetailsShortTextBox.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\PaginatedDataGrid.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\SearchableDataGrid.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\SearchBox.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\EscalationBanner.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\LoadingGrid.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\XmlViewer.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\GeneratedInternalTypeHelper.g.cs
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary_MarkupCompile.cache
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary_MarkupCompile.lref
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\ErrorControl.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\StatusBanner.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\DetailsShortTextBox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\PaginatedDataGrid.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\SearchableDataGrid.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\SearchBox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\EscalationBanner.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Control Styles\TextBox.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\LoadingGrid.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Themes\Generic.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\User Controls\XmlViewer.baml
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary.g.resources
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary.Properties.Resources.resources
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary.csproj.GenerateResource.cache
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary.csproj.CoreCompileInputs.cache
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary.csproj.CopyComplete
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary.dll
+A:\vFiles\Development Projects\SupportTools\SupportTools\Commons.ControlLibrary\obj\Release\Commons.ControlLibrary.pdb
