@@ -69,6 +69,7 @@
     <Compile Include="AsyncTaskWatcher.cs" />
     <Compile Include="HexHelper.cs" />
     <Compile Include="SmartFilter.cs" />
+    <Compile Include="SoapRequestHelper.cs" />
     <Compile Include="UnitTestFileLogger.cs" />
     <Compile Include="RegistryHandler.cs" />
     <Compile Include="DataTableHelper.cs" />
