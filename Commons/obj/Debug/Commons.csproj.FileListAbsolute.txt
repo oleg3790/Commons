@@ -154,3 +154,15 @@ A:\vFiles\Development Projects\SupportTools\SupportTools\Commons\obj\Debug\Commo
 A:\vFiles\Development Projects\SupportTools\SupportTools\Commons\obj\Debug\Commons.csproj.CopyComplete
 A:\vFiles\Development Projects\SupportTools\SupportTools\Commons\obj\Debug\Commons.dll
 A:\vFiles\Development Projects\SupportTools\SupportTools\Commons\obj\Debug\Commons.pdb
+A:\vFiles\Development Projects\Commons\Commons\bin\Debug\Commons.dll
+A:\vFiles\Development Projects\Commons\Commons\bin\Debug\Commons.pdb
+A:\vFiles\Development Projects\Commons\Commons\bin\Debug\Prism.xml
+A:\vFiles\Development Projects\Commons\Commons\bin\Debug\System.Reactive.Core.xml
+A:\vFiles\Development Projects\Commons\Commons\bin\Debug\System.Reactive.Interfaces.xml
+A:\vFiles\Development Projects\Commons\Commons\bin\Debug\System.Reactive.Linq.xml
+A:\vFiles\Development Projects\Commons\Commons\obj\Debug\Commons.csprojAssemblyReference.cache
+A:\vFiles\Development Projects\Commons\Commons\obj\Debug\Commons.csproj.ResolveComReference.cache
+A:\vFiles\Development Projects\Commons\Commons\obj\Debug\Commons.csproj.CoreCompileInputs.cache
+A:\vFiles\Development Projects\Commons\Commons\obj\Debug\Commons.csproj.CopyComplete
+A:\vFiles\Development Projects\Commons\Commons\obj\Debug\Commons.dll
+A:\vFiles\Development Projects\Commons\Commons\obj\Debug\Commons.pdb
