@@ -45,20 +45,15 @@ namespace Commons
         {
             try
             {
+                bool toNullable = Nullable.GetUnderlyingType(property.PropertyType) == rawValue.GetType();
                 bool numericToBool = property.PropertyType.ContainsType(typeof(bool), typeof(bool?))
                     && rawValue.GetType().ContainsType(typeof(int), typeof(decimal), typeof(Int16));
                 bool decimalToInt = property.PropertyType.ContainsType(typeof(int), typeof(int?))
                     && rawValue.GetType().ContainsType(typeof(decimal));
-                bool toNullableDatetime = (property.PropertyType == typeof(DateTime?) 
-                    && rawValue.GetType() == typeof(DateTime));
-                bool toNullableDecimal = (property.PropertyType == typeof(decimal?) 
-                    && rawValue.GetType() == typeof(decimal));
-                bool toNullableInt = (property.PropertyType == typeof(int?) 
-                    && rawValue.GetType() == typeof(int));
                 bool toGuid = property.PropertyType.ContainsType(typeof(Guid), typeof(Guid?))
                     && rawValue.GetType() == typeof(byte[]);
 
-                if (toNullableDatetime || toNullableDecimal || toNullableInt)
+                if (toNullable)
                     return rawValue;
                 else if (numericToBool)
                     rawValue = (Convert.ToInt16(rawValue) == 1) ? true : false;

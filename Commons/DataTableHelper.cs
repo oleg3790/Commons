@@ -7,7 +7,7 @@ namespace Commons
 {
     public static class DataTableHelper
     {
-        public static DataTable CastTableDataToString( DataTable table )
+        public static DataTable TableDataToString( this DataTable table )
         {
             DataTable clonedDT = table.Clone();
             for (int i = 0; i < clonedDT.Columns.Count; i++)

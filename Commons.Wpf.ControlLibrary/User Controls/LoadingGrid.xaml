@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="Commons.Wpf.ControlLibrary.LoadingGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Commons.Wpf.ControlLibrary"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500"
+             x:Name="LoadingGridUC">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="visibilityConverter"/>
+        <Storyboard x:Key="ellipse1Storyboard" Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.X)">
+            <DoubleAnimation From="0" To="10"/>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid Visibility="{Binding EnableLoad, ElementName=LoadingGridUC, Converter={StaticResource visibilityConverter}}">
+        <Grid Opacity="0.9" Background="#FF2C2C2C"/>
+        <!--<fa:ImageAwesome x:Name="LoadingIcon" Icon="Spinner" Foreground="{DynamicResource PrimaryFontColor}" SpinDuration="2.5" Height="150" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Spin="{Binding Path=EnableLoad, ElementName=LoadingGridUC}"/>-->
+        <Ellipse x:Name="ellipse1" Width="20" Height="20" Margin="-50,0,0,0" Fill="{StaticResource PrimaryFontColor}" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TranslateTransform/>
+            </Ellipse.RenderTransform>
+            <Ellipse.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding EnableLoad, ElementName=LoadingGridUC}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard x:Name="ellipse1Storyboard">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.Y)" To="15" AutoReverse="True" AccelerationRatio=".5" RepeatBehavior="Forever" Duration="0:0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="ellipse1Storyboard"/>
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Ellipse.Style>
+        </Ellipse>
+        <Ellipse x:Name="ellipse2" Width="20" Height="20" Fill="{StaticResource PrimaryFontColor}" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TranslateTransform/>
+            </Ellipse.RenderTransform>
+            <Ellipse.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding EnableLoad, ElementName=LoadingGridUC}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard x:Name="ellipse2Storyboard">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.Y)" To="15" AutoReverse="True" AccelerationRatio=".5" RepeatBehavior="Forever" BeginTime="0:0:0:0.1" Duration="0:0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="ellipse2Storyboard"/>
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Ellipse.Style>
+        </Ellipse>
+        <Ellipse x:Name="ellipse3" Width="20" Height="20" Margin="50,0,0,0" Fill="{StaticResource PrimaryFontColor}" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TranslateTransform/>
+            </Ellipse.RenderTransform>
+            <Ellipse.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding EnableLoad, ElementName=LoadingGridUC}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard x:Name="ellipse3Storyboard">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.Y)" To="15" AutoReverse="True" AccelerationRatio=".5" RepeatBehavior="Forever" BeginTime="0:0:0:0.2" Duration="0:0:0:0.3"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="ellipse3Storyboard"/>
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Ellipse.Style>
+        </Ellipse>
+    </Grid>
+</UserControl>

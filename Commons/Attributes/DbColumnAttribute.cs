@@ -2,6 +2,7 @@
 
 namespace Commons.Attributes
 {
+    [AttributeUsage(AttributeTargets.Property)]
     public class DbColumnAttribute : Attribute
     {
         public enum ColumnConversionHints

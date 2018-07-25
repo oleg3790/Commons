@@ -4,6 +4,10 @@ using System.Threading.Tasks;
 
 namespace Commons
 {
+    /// <summary>
+    /// Generic watcher class that notifies when task properties update
+    /// </summary>
+    /// <typeparam name="TResult"></typeparam>
     public sealed class AsyncTaskWatcher<TResult> : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

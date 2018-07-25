@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Commons.DataAccess</RootNamespace>
     <AssemblyName>Commons.DataAccess</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -48,17 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseConnectionType.cs" />
-    <Compile Include="New Connection Method\DbTypeHelper.cs" />
-    <Compile Include="New Connection Method\DParameterHelper.cs" />
+    <Compile Include="DbTypeHelper.cs" />
+    <Compile Include="DParameterHelper.cs" />
     <Compile Include="Exceptions\DatabaseException.cs" />
-    <Compile Include="New Connection Method\DatabaseTypeManager.cs" />
-    <Compile Include="DbConnection.cs" />
-    <Compile Include="New Connection Method\DConnection.cs" />
-    <Compile Include="New Connection Method\DParameter.cs" />
+    <Compile Include="DatabaseTypeManager.cs" />
+    <Compile Include="DConnection.cs" />
+    <Compile Include="DParameter.cs" />
     <Compile Include="Exceptions\DbConnectionTimeoutException.cs" />
-    <Compile Include="DbException.cs" />
-    <Compile Include="DbResult.cs" />
     <Compile Include="Exceptions\InvalidDbCredentialsException.cs" />
     <Compile Include="Exceptions\InvalidSshCredentialsException.cs" />
     <Compile Include="Exceptions\NoDataException.cs" />

@@ -3,24 +3,34 @@ using Microsoft.Win32;
 
 namespace Commons
 {
+    /// <summary>
+    /// Registry helper methods for HKEY_CURRENT_USER registry base key
+    /// </summary>
     public static class RegistryHandler
-    {        
-        public static void CreateSubKey()
+    {
+        public static bool CheckSubkeyExists( string subKeyName )
         {
-            string[] subKeys = Registry.CurrentUser.GetSubKeyNames();
-            bool subKeyPresent = false;
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(subKeyName);
 
-            foreach (string x in subKeys)
-            {
-                if (x == "SupportTools")
-                    subKeyPresent = true;
-            }
+            if (key == null)
+                return false;
+            else
+                return true;
+        }
 
-            if (subKeyPresent != true)
+        /// <summary>
+        /// Create subkey under HKEY_CURRENT_USER
+        /// </summary>
+        /// <param name="subKeyName"></param>
+        public static void CreateSubKey( string subKeyName )
+        {
+            bool subkeyExists = CheckSubkeyExists(subKeyName);
+
+            if (subkeyExists != true)
             {
                 try
                 {
-                    Registry.CurrentUser.CreateSubKey("SupportTools");
+                    Registry.CurrentUser.CreateSubKey(subKeyName);
                 }
                 catch (Exception e)
                 {
@@ -29,11 +39,11 @@ namespace Commons
             }                
         }
 
-        public static string CheckRegistryCache(string cacheItemName, bool isItemEncrypted)
+        public static string CheckRegistryCache( string subKeyName, string cacheItemName, bool isItemEncrypted )
         {
             try
             {
-                using (RegistryKey cacheKey = Registry.CurrentUser.OpenSubKey("SupportTools"))
+                using (RegistryKey cacheKey = Registry.CurrentUser.OpenSubKey(subKeyName))
                 {
                     if (cacheKey.GetValue(cacheItemName) != null && isItemEncrypted == false)
                         return cacheKey.GetValue(cacheItemName).ToString();
@@ -41,7 +51,7 @@ namespace Commons
                     if (cacheKey.GetValue(cacheItemName) != null && isItemEncrypted == true)
                     {
                         Crypto credManage = new Crypto();
-                        return credManage.DecryptString(cacheKey.GetValue(cacheItemName).ToString(), credManage.vector);
+                        return credManage.DecryptString(cacheKey.GetValue(cacheItemName).ToString(), Crypto.VECTOR);
                     }
                     else
                         return null;
@@ -54,11 +64,11 @@ namespace Commons
             }
         }
 
-        public static void WriteRegistryCache(string cacheItemName, string cacheItemValue, bool isItemEncrypted)
+        public static void WriteRegistryCache( string subKeyName, string cacheItemName, string cacheItemValue, bool isItemEncrypted )
         {
             try
             {
-                using (RegistryKey cacheKey = Registry.CurrentUser.OpenSubKey("SupportTools", true))
+                using (RegistryKey cacheKey = Registry.CurrentUser.OpenSubKey(subKeyName, true))
                 {
                     if (isItemEncrypted == false)
                     {
@@ -76,10 +86,10 @@ namespace Commons
                         if (cacheKey.GetValue(cacheItemName) != null)
                         {
                             cacheKey.DeleteValue(cacheItemName);
-                            cacheKey.SetValue(cacheItemName, credManage.EncryptString(cacheItemValue, credManage.vector));
+                            cacheKey.SetValue(cacheItemName, credManage.EncryptString(cacheItemValue, Crypto.VECTOR));
                         }
                         else
-                            cacheKey.SetValue(cacheItemName, credManage.EncryptString(cacheItemValue, credManage.vector));
+                            cacheKey.SetValue(cacheItemName, credManage.EncryptString(cacheItemValue, Crypto.VECTOR));
                     }
                 }
             }
@@ -89,11 +99,11 @@ namespace Commons
             }            
         }
 
-        public static void DeleteRegistryItem(string cacheItemName)
+        public static void DeleteRegistryItem( string subKeyName, string cacheItemName )
         {
             try
             {
-                using (RegistryKey cacheKey = Registry.CurrentUser.OpenSubKey("SupportTools", true))
+                using (RegistryKey cacheKey = Registry.CurrentUser.OpenSubKey(subKeyName, true))
                 {
                     if (cacheKey.GetValue(cacheItemName) != null)
                         cacheKey.DeleteValue(cacheItemName);
@@ -104,5 +114,53 @@ namespace Commons
                 LoggingHelper.WriteExceptionToLog(e);
             }
         }
+
+        public static bool RenameSubKey( string subKeyName, string newSubKeyName )
+        {
+            bool newSubkeyExists = CheckSubkeyExists(newSubKeyName);
+            bool oldSubkeyExists = CheckSubkeyExists(subKeyName);
+
+            if (newSubkeyExists || !oldSubkeyExists) // return false if the new subkey already exists or old one does not
+                return false;
+
+            bool keyCopied = CopyKey(subKeyName, newSubKeyName);
+
+            if (keyCopied)
+            {
+                Registry.CurrentUser.DeleteSubKeyTree(subKeyName);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public static bool CopyKey( string keyNameToCopy, string newKeyName )
+        {
+            RegistryKey destinationKey = Registry.CurrentUser.CreateSubKey(newKeyName);
+            RegistryKey sourceKey = Registry.CurrentUser.OpenSubKey(keyNameToCopy);
+
+            if (sourceKey == null)
+                return false;
+
+            RecurseCopyKey(sourceKey, destinationKey);
+            return true;
+        }
+
+        private static void RecurseCopyKey( RegistryKey sourceKey, RegistryKey destinationKey )
+        {
+            foreach (string valueName in sourceKey.GetValueNames())
+            {
+                object objValue = sourceKey.GetValue(valueName);
+                RegistryValueKind valKind = sourceKey.GetValueKind(valueName);
+                destinationKey.SetValue(valueName, objValue, valKind);
+            }
+
+            foreach (string sourceSubKeyName in sourceKey.GetSubKeyNames())
+            {
+                RegistryKey sourceSubKey = sourceKey.OpenSubKey(sourceSubKeyName);
+                RegistryKey destSubKey = destinationKey.CreateSubKey(sourceSubKeyName);
+                RecurseCopyKey(sourceSubKey, destSubKey);
+            }
+        }        
     }    
 }

@@ -7,17 +7,17 @@ namespace Commons
 {
     public class Crypto
     {
-        public string vector = "olegkrysko031990";
-        private const int keysize = 256;
+        public const string VECTOR = "olegkrysko031990";
+        private const int KEYSIZE = 256;
 
         public string EncryptString(string textString, string passPhrase)
         {
-            byte[] vectorBytes = Encoding.UTF8.GetBytes(vector);
+            byte[] vectorBytes = Encoding.UTF8.GetBytes(VECTOR);
             byte[] textStringBytes = Encoding.UTF8.GetBytes(textString);
 
             PasswordDeriveBytes password = new PasswordDeriveBytes(passPhrase, null);
 
-            byte[] keyBytes = password.GetBytes(keysize / 8);
+            byte[] keyBytes = password.GetBytes(KEYSIZE / 8);
 
             RijndaelManaged symmetricKey = new RijndaelManaged();
             symmetricKey.Mode = CipherMode.CBC;
@@ -36,12 +36,12 @@ namespace Commons
 
         public string DecryptString(string cipherText, string passPhrase)
         {
-            byte[] initVectorBytes = Encoding.ASCII.GetBytes(vector);
+            byte[] initVectorBytes = Encoding.ASCII.GetBytes(VECTOR);
             byte[] cipherTextBytes = Convert.FromBase64String(cipherText);
 
             PasswordDeriveBytes password = new PasswordDeriveBytes(passPhrase, null);
 
-            byte[] keyBytes = password.GetBytes(keysize / 8);
+            byte[] keyBytes = password.GetBytes(KEYSIZE / 8);
 
             RijndaelManaged symmetricKey = new RijndaelManaged();
             symmetricKey.Mode = CipherMode.CBC;
