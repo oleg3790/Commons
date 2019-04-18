@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <version>1.0.0.0</version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\build\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\build\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Commons.DataAccess.csproj.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="12.1.24160719" />
+    <PackageReference Include="SSH.NET" Version="2016.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XApp.Commons\XApp.Commons.csproj" />
+    <ProjectReference Include="..\XApp.Commons.Logging\XApp.Commons.Logging.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+</Project>

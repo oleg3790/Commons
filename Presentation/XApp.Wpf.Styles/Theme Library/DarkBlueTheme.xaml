@@ -1,0 +1,203 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="FontTheme">Open Sans</FontFamily>
+    <FontFamily x:Key="SearchResultDescriptorTheme">Calibri</FontFamily>
+
+    <!--Highlight Colors-->
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FF263E61"/>
+    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey }" Color="#FF263E61"/>
+    <SolidColorBrush x:Key="TransparentHighlightColor" Color="Transparent"/>
+
+    <!--#region Global Themes-->    
+    <SolidColorBrush x:Key="PrimaryThemeColor" Color="#FF1D243E" />
+    <SolidColorBrush x:Key="PrimaryFontColor" Color="#FF60B3F7" />            
+    <SolidColorBrush x:Key="PrimaryFontMouseOverColor" Color="#FF8BC8FB" />  
+    <SolidColorBrush x:Key="PrimaryFontSelectedColor" Color="#FFC1E0FB" />
+    <SolidColorBrush x:Key="PrimaryAppBackgroundColor" Color="#FFD8DAE2"/>
+
+    <SolidColorBrush x:Key="SettingsBackgroundColor" Color="#FF303547" />
+    <SolidColorBrush x:Key="ToolBackgroundColor" Color="White" />
+    <SolidColorBrush x:Key="ToolBorderColor" Color="#FFB5B7BF" />
+    <SolidColorBrush x:Key="ErrorStatusFontColor" Color="IndianRed"/>
+    <SolidColorBrush x:Key="SuccessStatusFontColor" Color="Green"/>
+    <SolidColorBrush x:Key="StatusFontColor" Color="IndianRed"/>
+    
+    <SolidColorBrush x:Key="LightFontColor" Color="#FFE8EEF9" />
+
+    <!--DataGrid-->
+    <SolidColorBrush x:Key="DataGridBackgroundColor" Color="White" />
+    <SolidColorBrush x:Key="DataGridBorderColor" Color="#FF303547" />
+    <SolidColorBrush x:Key="DataGridForegroundColor" Color="#FF494949" />
+    <SolidColorBrush x:Key="DataGridAlternateRowColor" Color="#FFD1EBFF" />
+    <SolidColorBrush x:Key="DataGridHorizontalGridLineColor" Color="#FFC2E3FC" />
+    <SolidColorBrush x:Key="DataGridVerticleGridLineColor" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridHeaderForegroundColor" Color="#FF60B3F7" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundColor" Color="#FF303547" />
+    <SolidColorBrush x:Key="DataGridHeaderThumbColor" Color="#FF3D4976" />
+    <SolidColorBrush x:Key="DataGridHeaderMouseOverColor" Color="#FF171E36" />
+    <SolidColorBrush x:Key="DataGridCellSelectedColor" Color="#FFB7DFFF" />
+    
+    <!--ScrollViewer-->
+    <SolidColorBrush x:Key="ScrollDisabledForegroundColor" Color="#FF777778" />
+    <SolidColorBrush x:Key="ScrollBackgroundColor" Color="#FF303547" />
+    <SolidColorBrush x:Key="ScrollBorderColor" Color="#FF303547" />
+    <SolidColorBrush x:Key="ScrollThumbColor" Color="#FF60B3F7" />
+    <SolidColorBrush x:Key="ScrollThumbBackgroundColor" Color="#4C60B3F7" />
+    <SolidColorBrush x:Key="ScrollThumbBorderColor" Color="#4C60B3F7" />
+    <SolidColorBrush x:Key="ScrollArrowColor" Color="#FF60B3F7" />
+    <SolidColorBrush x:Key="ScrollArrowPressedColor" Color="#33404053"/>
+    
+    <!--ComboBox-->
+    <SolidColorBrush x:Key="ComboBoxNormalBorderColor" Color="Black"/>
+    <SolidColorBrush x:Key="ComboBoxNormalBackgroundColor" Color="White"/>
+    <SolidColorBrush x:Key="ComboBoxFontColor" Color="#FF444444"/>
+    <SolidColorBrush x:Key="ComboBoxSelectionColor" Color="#FFAFD6F7"/>
+    <SolidColorBrush x:Key="ComboBoxMouseOverItemBackgroundColor" Color="#FF8BC8FB"/>
+    <SolidColorBrush x:Key="ComboBoxDisabledForegroundColor" Color="#888" />
+    <SolidColorBrush x:Key="ComboBoxDisabledBackgroundColor" Color="#FFD4D4D4" />
+    <SolidColorBrush x:Key="ComboBoxDisabledBorderColor" Color="#888" />
+    
+    <!--TabControl/TabItem-->
+    <SolidColorBrush x:Key="TabControlOwningGridBackgroundColor" Color="#FF303547" />
+    <SolidColorBrush x:Key="TabItemBorderColor" Color="Transparent" />
+    <SolidColorBrush x:Key="TabItemBackgroundColor" Color="Transparent" />
+    <SolidColorBrush x:Key="TabItemForegroundColor" Color="White" />
+    <SolidColorBrush x:Key="TabItemSelectedBorderColor" Color="#FF60B3F7" />
+    <SolidColorBrush x:Key="TabItemDeselectedBorderColor" Color="#FF303547" />
+    <SolidColorBrush x:Key="TabItemSelectedForegroundColor" Color="#FF60B3F7" />
+    <SolidColorBrush x:Key="TabItemDeselectedForegroundColor" Color="#FF32384F" />
+    <SolidColorBrush x:Key="TabItemMouseOverColor" Color="#FF8BC8FB" />
+    
+    <!--Listbox-->
+    <SolidColorBrush x:Key="ListboxMouseOverColor" Color="#FFC8E2F7"/>
+    <SolidColorBrush x:Key="ListboxSelectionColor" Color="#FFAFD6F7"/>
+    <SolidColorBrush x:Key="ListboxDisabledColor" Color="#FFD4D4D4"/>
+    
+    <!--Checkbox-->
+    <SolidColorBrush x:Key="CheckboxCheckColor" Color="#FF1D243E"/>
+    <SolidColorBrush x:Key="CheckboxBackgroundColor" Color="White"/>
+    <SolidColorBrush x:Key="CheckboxForegroundColor" Color="#FF1D243E"/>
+
+    <!--Buttons-->
+    <SolidColorBrush x:Key="ButtonPrimaryThemeColor" Color="#FFA7D5FB"/>
+    <SolidColorBrush x:Key="ButtonPrimaryBorderColor" Color="#FF60B3F7"/>
+    <SolidColorBrush x:Key="ButtonMouseOverColor" Color="#FF83C6FD"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBorderColor" Color="#FF3a9ff2"/>
+    <SolidColorBrush x:Key="ButtonPressedColor" Color="#FF73BEFB"/>
+    <SolidColorBrush x:Key="ButtonForegroundColor" Color="#FF035878"/>
+    <SolidColorBrush x:Key="ButtonDisabledBackgroundColor" Color="#FFD4D4D4"/>
+    <SolidColorBrush x:Key="ButtonDisabledBorderColor" Color="#FFAEAEAE"/>
+    <SolidColorBrush x:Key="ButtonDisabledForegroundColor" Color="#FFAEAEAE"/>
+    
+    <!--TextBox-->
+    <SolidColorBrush x:Key="TextboxForegroundColor" Color="#FF444444"/>
+    <SolidColorBrush x:Key="TextboxLightForegroundColor" Color="#FFC1E0FB"/>
+    <SolidColorBrush x:Key="TextboxBackgroundColor" Color="White"/>
+    <SolidColorBrush x:Key="TextboxDisabledBackgroundColor" Color="#FFD4D4D4"/>
+    <SolidColorBrush x:Key="TextboxBorderColor" Color="#FF404040"/>
+    
+    <!--GroupBox-->
+    <SolidColorBrush x:Key="GroupboxBorderColor" Color="#FF60B3F7"/>
+
+    <!--DatePicker-->
+    <SolidColorBrush x:Key="DatePickerBorderColor" Color="Silver"/>
+    
+    <!--Expander-->
+    <SolidColorBrush x:Key="ExpanderBackgroundColor" Color="#FFECECEC"/>
+    <SolidColorBrush x:Key="ExpanderBorderColor" Color="#FF60B3F7"/>
+    <SolidColorBrush x:Key="ExpanderToggleButtonBackgroundColor" Color="#FFA7D5FB" />
+    <SolidColorBrush x:Key="ExpanderToggleButtonForegroundColor" Color="#FF60B3F7" />
+    <SolidColorBrush x:Key="ExpanderToggleButtonPressedColor" Color="#FF72BCF9" />
+    <SolidColorBrush x:Key="ExpanderToggleButtonMouseOverBorderColor" Color="#FF239BFD" />
+    
+    <!--ToggleButton-->
+    <SolidColorBrush x:Key="ToggleButtonDefaultBackgroundColor" Color="#FFC0E1FD"/>
+    <SolidColorBrush x:Key="ToggleButtonBorderColor" Color="#FF60B3F7"/>
+    <SolidColorBrush x:Key="ToggleButtonForegroundColor" Color="#FF035878"/>
+    <SolidColorBrush x:Key="ToggleButtonMouseOverBorderColor" Color="#FF0088F7"/>
+    <SolidColorBrush x:Key="ToggleButtonPressedColor" Color="#FF73BEFB"/>
+    <SolidColorBrush x:Key="ToggleButtonOnBackgroundColor" Color="#FF9FCEF5" />
+    <SolidColorBrush x:Key="ToggleButtonOffBackgroundColor" Color="#FFC0E1FD" />
+    <SolidColorBrush x:Key="ToggleButtonDisabledBackgroundColor" Color="#FFD4D4D4"/>
+    <SolidColorBrush x:Key="ToggleButtonDisabledBorderColor" Color="#FFAEAEAE"/>
+    <SolidColorBrush x:Key="ToggleButtonDisabledForegroundColor" Color="#FFAEAEAE"/>
+
+    <!--ToggleButton Slide-->
+    <SolidColorBrush x:Key="ToggleSlideDefaultBackgroundColor" Color="White"/>
+    <SolidColorBrush x:Key="ToggleSlideBorderColor" Color="#FFD4D4D4"/>
+    <SolidColorBrush x:Key="ToggleSlideSliderBackgroundColor" Color="#FFA7D5FB"/>
+    <SolidColorBrush x:Key="ToggleSlideSliderBorderColor" Color="#FF63B5F9"/>
+    <SolidColorBrush x:Key="ToggleSlideForegroundColor" Color="#FF2A365F"/>
+    <SolidColorBrush x:Key="ToggleSlidePressedColor" Color="#FF73BEFB"/>
+    <SolidColorBrush x:Key="ToggleSlideMouseOverBorderColor" Color="#FF239BFD"/>
+
+    <!--ToolTip-->
+    <SolidColorBrush x:Key="ToolTipBorderColor" Color="#FF60B3F7"/>
+    <SolidColorBrush x:Key="ToolTipBackgroundColor" Color="#FFE2F2FF"/>
+    <SolidColorBrush x:Key="ToolTipForegroundColor" Color="#FF035878"/>
+    
+    <!--Label-->
+    <SolidColorBrush x:Key="ContentLabelForegroundColor" Color="#FF2A365F"/>
+    <!--#endregion-->
+
+    <!--#region Specific Control Themes--> 
+
+    <!--Main Top Banner-->
+    <SolidColorBrush x:Key="BannerColor" Color="#FF1D1D29" />
+    <SolidColorBrush x:Key="ExitButtonMouseOverBackgroundColor" Color="IndianRed" />
+    <SolidColorBrush x:Key="ExitButtonMouseOverForegroundColor" Color="White" />
+    <SolidColorBrush x:Key="AppControlButtonMouseOverBackgroundColor" Color="#FF303547" />
+
+    <!--Main Window Tools Listbox-->
+    <SolidColorBrush x:Key="AppToolsListSelectedBorderColor" Color="#FFC1E0FB" />
+    <SolidColorBrush x:Key="AppToolsListDefaultBorderColor" Color="#FF60B3F7" />
+
+    <!--Main Window Tools Slider Control Button-->
+    <SolidColorBrush x:Key="AppToolsSliderControlBackgroundColor" Color="#FF191F34" />
+    <SolidColorBrush x:Key="AppToolsSliderControlMouseOverColor" Color="#FF151A2B" />
+    <SolidColorBrush x:Key="AppToolsSliderControlPressedColor" Color="#FF131827" />
+    <SolidColorBrush x:Key="AppToolsSliderControlContentColor" Color="#CC60B3F7" />
+
+    <!--Announcements Colors-->
+    <SolidColorBrush x:Key="HomeDashboardHeaderFontColor" Color="IndianRed"/>
+    <SolidColorBrush x:Key="HomeDashboardHeaderBackgroundColor" Color="#FF3D476E"/>
+    <SolidColorBrush x:Key="HomeDashboardBackgroundColor" Color="#FF293049"/>
+    <SolidColorBrush x:Key="HomeDashboardFontColor" Color="#FF60B3F7"/>
+
+    <!--Status Control Colors-->
+    <SolidColorBrush x:Key="StatusControlBackgroundColor" Color="IndianRed"/>
+    <SolidColorBrush x:Key="StatusControlSuccessBackgroundColor" Color="#FF1FBD57"/>
+    <SolidColorBrush x:Key="StatusControlForegroundColor" Color="#FF1D243E"/>
+
+    <!--List Selector-->
+    <SolidColorBrush x:Key="ListSelectorBackgroundColor" Color="#FF1D243E" />
+    <SolidColorBrush x:Key="ListSelectorItemBackgroundColor" Color="#FF232A47" />
+    <SolidColorBrush x:Key="ListSelectorSelectedBorderColor" Color="#FFC1E0FB" />
+    <SolidColorBrush x:Key="ListSelectorSelectedForegroundColor" Color="#FFC1E0FB" />
+
+    <!--Info View Colors-->
+    <SolidColorBrush x:Key="InfoMainBackgroundColor" Color="#FF303547" />     <!--Lighter than Info Detail-->
+    <SolidColorBrush x:Key="InfoDetailBackgroundColor" Color="#FF1D243E" />   <!--Darker than Info Main-->
+    <SolidColorBrush x:Key="InfoTextColor" Color="IndianRed" />
+    
+    <!--DetailsShortTextBox-->
+    <SolidColorBrush x:Key="DetailsShortTextboxBorderColor" Color="LightGray" />
+    
+    <!--App Icons-->
+    <SolidColorBrush x:Key="AppGlobalIconButtonColor" Color="#FF60B3F7" />    <!--IconButtons: ExitButton, SettingsButton-->
+    <SolidColorBrush x:Key="AppGlobalIconPressedButtonColor" Color="#FF0BA5FD" />
+    <SolidColorBrush x:Key="AppGlobalAlertIconColor" Color="IndianRed" />
+    
+    <!--Secondary Accent Colors-->
+    <SolidColorBrush x:Key="SecondaryAccentBackgroundColor" Color="#FF2E2E46" />
+    <SolidColorBrush x:Key="ThirdAccentBackgroundColor" Color="#FF1C2336" />
+
+    <!--Search Result Items-->
+    <SolidColorBrush x:Key="SearchResultTypeColor" Color="#FF80C4FC"/>
+    <SolidColorBrush x:Key="SearchResultTypeBackgroundColor" Color="#FF49537a"/>
+    <SolidColorBrush x:Key="SearchResultIdentifierColor" Color="White"/>
+
+    <!--#endregion-->
+    
+</ResourceDictionary>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">  
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\build\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\build\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Control Styles\Button.xaml" />
+    <None Remove="Control Styles\Checkbox.xaml" />
+    <None Remove="Control Styles\ComboBox.xaml" />
+    <None Remove="Control Styles\DataGrid.xaml" />
+    <None Remove="Control Styles\Expander.xaml" />
+    <None Remove="Control Styles\GroupBox.xaml" />
+    <None Remove="Control Styles\Hyperlink.xaml" />
+    <None Remove="Control Styles\Label.xaml" />
+    <None Remove="Control Styles\LabelTextbox.xaml" />
+    <None Remove="Control Styles\ListBox.xaml" />
+    <None Remove="Control Styles\RadioButton.xaml" />
+    <None Remove="Control Styles\RichTextBox.xaml" />
+    <None Remove="Control Styles\ScrollViewer.xaml" />
+    <None Remove="Control Styles\Storyboards.xaml" />
+    <None Remove="Control Styles\TabControl.xaml" />
+    <None Remove="Control Styles\TextBlock.xaml" />
+    <None Remove="Control Styles\TextBox.xaml" />
+    <None Remove="Control Styles\ToggleButton.xaml" />
+    <None Remove="Control Styles\ToolTip.xaml" />
+    <None Remove="Theme Library\DarkBlueTheme.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="System.Reactive.Core" Version="4.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Control Styles\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\Checkbox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\Expander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\GroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\Hyperlink.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\Label.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\LabelTextbox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\RichTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\ScrollViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\Storyboards.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\ToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control Styles\ToolTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme Library\DarkBlueTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System.Xaml" />
+  </ItemGroup>
+</Project>
